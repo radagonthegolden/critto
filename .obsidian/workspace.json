@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "54e532afefe7c9d5",
+        "id": "1dddccfbf927daa7",
         "type": "tabs",
-        "dimension": 39.305054151624546,
+        "dimension": 46.66064981949458,
         "children": [
           {
-            "id": "c28c7b0f1ec41a96",
+            "id": "b7e892a988346772",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Crittografia simmetrica.md",
+                "file": "prereq_2.md",
                 "mode": "source",
                 "source": false
               }
@@ -23,9 +23,9 @@
         ]
       },
       {
-        "id": "71388358d685a38b",
+        "id": "3cc7fa2c6569c352",
         "type": "tabs",
-        "dimension": 60.69494584837545,
+        "dimension": 53.33935018050542,
         "children": [
           {
             "id": "97ba00b43a955d59",
@@ -33,7 +33,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "N1 - Crittografia simmetrica.pdf"
+                "file": "prereq_2.pdf"
               }
             }
           }
@@ -66,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "residuo",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Crittografia simmetrica.md",
+                "file": "prereq_2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Crittografia simmetrica.md",
+                "file": "prereq_2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Crittografia simmetrica.md"
+                "file": "prereq_2.md"
               }
             }
           }
@@ -164,8 +164,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c28c7b0f1ec41a96",
+  "active": "b7e892a988346772",
   "lastOpenFiles": [
+    "prereq_1.md",
+    "rho.PNG",
+    "prereq_2.md",
+    "desround.jpg",
+    "prereq_2.pdf",
+    "s.md",
+    "prereq_1/expmod.md",
+    "prereq_1",
+    "expmod.md",
+    "README.md",
+    "N1 - Crittografia simmetrica.pdf",
+    "Crittografia simmetrica.md",
     "tls13.jpg",
     "symm_crypto.pdf",
     "symm_crypto.ipynb",
@@ -178,17 +190,10 @@
     "OAEP.jpg",
     "hiddentext.txt",
     "feistel.jpg",
-    "Diffie-Hellman.ipynb",
-    "desround.jpg",
     "cifratura_schema.jpg",
     "CBC.jpg",
     "authDH.jpg",
-    "ACLIB.zip",
-    "ACLIB.tgz",
-    "README.md",
     "critto/README.md",
-    "Notebook/feistel.jpg",
-    "Crittografia simmetrica.md",
     "Crittografia asimmetrica.md"
   ]
 }

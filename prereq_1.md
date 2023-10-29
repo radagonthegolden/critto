@@ -92,7 +92,7 @@ Per esempio in $Z_{23}^*$, 3 e' un residuo quadratico, visto che esiste un numer
 
 Facendo $x^q \mod p$, se il risultato e' 1 allora genera $Q$, in caso contrario genera tutto $Z_p^*$. 
 # L'Esponenziale modulare
-L'esponenziale modulare e' una funzione one-way. 
+L'esponenziale modulare e' una funzione one-way.
 
 E' facile da calcolare, con un trucco. Infatti fare tutte le moltiplicazioni ripetute e' infattibile sia per tempo che spazio. 
 
