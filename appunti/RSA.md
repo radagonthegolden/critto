@@ -13,14 +13,14 @@ A generare le chiavi è il destinatario del messaggio, diciamo sia A.
 
 B, che legge e conosce $(e,n)$ cifra il suo messaggio in chiaro $M$ producendo $C = M^e \mod n$. 
 
-A, per decifrare $C$ semplicemente fa $C^d \mod = M$. Dimostriamo questa uguaglianza.
+A, per decifrare $C$ semplicemente fa $C^d \mod n= M$. Dimostriamo questa uguaglianza.
 
 >Siccome $d = e^{-1} \mod \phi(n) \implies ed = 1 \mod \phi(n)$ vale $ed = k\cdot \phi(n)+1$, per qualche intero $k$
 
 Quindi 
 $$\begin{align}
 C^d \mod n &= (M^e \mod n)^d \mod n \\
-&= M^{ed} \mod \\
+&= M^{ed} \mod n\\
 &= M^{k\cdot \phi(n)+1} \mod n \\
 &= M \cdot M^{ k\cdot \phi(n)} \mod n \\
 &= M \cdot M^{k(p-1)(q-1)} \mod n
