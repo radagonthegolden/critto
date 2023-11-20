@@ -12,9 +12,10 @@ Notiamo che anche $-x$ e' radice di $y$, ma c'e' ne sono altre 2, dovute al fatt
 Notiamo anche $y\mod p$ e $y \mod q$ sono [[prereq_2#Residui quadratici e test di Solovay-Strassen|residui quadratici]]. Infatti $x\mod p$ e' radice di $y\mod p$:
 
 $((x\mod p)\cdot (x\mod p))\mod p = (x\cdot x) \mod p = ((x\cdot x)\mod n) \mod p = y \mod p$
+
 Analogamente $y\mod q$ ha radice $y\mod q$. 
 
-Naturalmente notiamo come le radici siano a due a due congrue modulo $p$ e modulo $q$. 
+Naturalmente le radici siano a due a due congrue modulo $p$ e modulo $q$. 
 # Il sistema crittografico di Rabin
 Richiede un solo parametro: $N$, la lunghezza in bit del modulo. Viene richiesto che $M$ sia un numero minore del modulo, o trasformato in tale da funzioni invertibili.
 
@@ -109,7 +110,7 @@ B, munito di $(p,g,A)$ compie i seguenti passi:
 - Calcola $B = g^b \mod p$ e poi $c = (A^b \cdot M) \mod p$
 - Invia ad A la coppia $C = (B,c)$ che costituisce il cyphertext
 
-A, ricevuto $C$ calcola:
+A, ricevuto $C$, calcola:
 - $Z = B^a \mod p$ 
 - Trova poi $Z^{-1}\mod p$ usando Euclide esteso
 - Decifra infine il messaggio facendo $M = (Z^{-1} \cdot c) \mod p$
