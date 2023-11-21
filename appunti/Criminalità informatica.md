@@ -1,4 +1,4 @@
-# Capitolo I
+# Capitolo I & 2
 - Aumento netto dei cyberattacchi nel periodo 2018-2022
 	- La maggior parte in America all'inizio, poi aumenta anche l'EU
 		- Ragioni: difese più alte in America, maggiore digitalizzazione in Europa
@@ -29,3 +29,43 @@
 - Attacchi indiretti: violare direttamente un'azienda che ha preso delle precauzioni può essere difficile. Quindi spesso vengono eseguiti dei **supply chain attack** dove si attacca un fornitore o un cliente dell'azienda (per poi arrivare a quest'ultima)
 	- Esempio: nel 2011 un attacco riuscii a penetrare il colosso di cybersecurity americano RSA, per rubare i seed per la generazione di Token usati per identificarsi. Loro non erano però il vero obbiettivo: il bersaglio era la Lockheed Martin, azienda militare. Gli attaccanti, probabilmente stati ostili agli USA, volevano rubare i dati della LM per scopi strategici.
 
+# Capitolo 3
+- **BEC:** Business Email Compromise, ovvero il criminale è entrato nel sistema email aziendale
+	- Una truffa possibile è quella in cui il "CEO" di un'azienda manda una mail ad un impiegato di basso livello, che quindi si sente in dovere di fare ciò che dice
+		- Esempio: *Ho bisogno di soldi per dei regali da fare a clienti ma sono senza al momento. Mi fai un bonifico? Sono in riunione quindi non rispondo al cellulare. Nel pomeriggio te li rimborso*
+	- Il criminale può anche inviare fatture false, richieste di fondi, o altri danni
+	- Siccome sono effettivamente mail aziendali i filtri anti-spam non funzionano
+	- Oltre a perdite dirette, un'azienda colpita da un BEC rischia di perdere reputazione e clienti, nonché di subire multe legali
+	- Si tratta del secondo più grande tipo di cyberattacco, particolarmente in aumento in Italia
+	- Le BEC si dividono a grande linee in due tipi:
+		- **BEC-as-a-service:** "Attacchi "di massa", dove si inviano tantissime mail a tante aziende con un account anonimo. La stragrande maggioranza verrà ignorata, ma anche solo pochi abboccano risulta comunque lucrativo
+		- Attacchi più mirati dove prima si viola una casella legittima, da cui far partire l'attacco che in generale riguarda furto di soldi o installare un malware
+	- Siccome allegati da scaricare possono essere infetti, di solito le BEC non li contengono, in modo da far abbassare la guardia ai dipendenti
+	- Possono essere molto efficaci se bonifici e trasferimenti bancari sono operazioni che il target compie giornalmente
+	- Modi per proteggersi:
+		- Usare email con accesso robusto e password forti
+		- Non usare webmail, facili da attaccare
+		- Essere scaltri con mail sospette: chiama il mittente al telefono, vai nel suo ufficio in persona
+		- Verificare bene la mail che è arrivata
+	- **Business Executive and Attorney Impersonation:** variante della BEC in cui il criminale si finge il rappresentante di uno studio legale e fa pressione sul bersaglio, spesso dicendo che si tratta di roba urgente
+	- **Data Theft:** altra variante della BEC in cui si rubano dati
+-  **Man in the Middle:** attacchi in cui un terzo si pone tra due persone, potendo ascoltare o alterare la conversazione. 
+	- **Eavesdropping:** letteralmente "origliare", si tratta di un attacco in cui il terzo ascolta la conversazione. Facile da eseguire su Wi-Fi con access point non criptati
+	- Per combatterlo si usa la **certificazione**, per esempio nel TLS
+	- Per esempio se l'attaccante entra in contatto con l'azienda $X$ fingendosi l'azienda $Y$ (di cui $X$ si fida), può dire "questo mese pagatemi a quest'altro indirizzo bancario" per poi rubare i soldi
+	- **Man in the Browser:** attacco MITM in cui il criminale si pone tra un browser e un web server
+		- Esempio: malware che aspetta che tu ti connetti alla tua banca, per poi mettersi in mezzo. L'unico modo che hai per capire che qualcosa non va è che il protocollo che normalmente è HTTPS è HTTP. Quando cerchi di fare il bonifico, questo viene modificato per dare tutti i tuoi soldi al criminale, senza che tu possa rendertene conto. 
+		- Non ci sono molte difese nel caso in cui l'attaccante stia solo cercando di leggere i tuoi dati
+		- Un modo per difendersi dal **tampering** (modifica dei dati) è invece la **2 factor authentication**, dove è richiesto all'utente di autorizzare la transazione da un dispositivo diverso. Nell'esempio di prima, se per fare il bonifico fosse richiesto il telefono e questo indicasse chiaramente a chi arrivano i soldi e quanti, ti renderesti conto della truffa
+			- Chiaramente il telefono non deve essere infetto e l'utente deve leggere bene le notifiche. Alcuni dicono che richiedere questo livello di controllo faccia perdere fiducia agli utenti
+		- Blowlocking #todo capire che cazzo è
+		- Se un utente nega di aver fatto un pagamento (perché truffato) è responsabilità della banca provare che in realtà l'ha fatto è che la procedura:
+			- è stata autenticata
+			- è stata correttamente registrata
+			- è avvenuta senza malfunzionamenti
+		- Se così non succede la banca deve ridarti i soldi
+		- Le responsabilità dell'utente sono quindi solo
+			- Usare gli strumenti di pagamento come richiesto
+			- Denunciare furto o truffe velocemente
+		- In generale la responsabilità è dell'istituzione, visto che considerata **la più adatta a gestire il rischio**
+			- Questo perché è chiaro che è l'azienda a sapere meglio, in media, quanti soldi vengano persi per cyberattacchi, e quindi è lei quella meglio in grado di spalmare questi su tutti i suoi utenti
