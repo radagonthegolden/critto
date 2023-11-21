@@ -14,7 +14,7 @@ L'algoritmo è molto efficiente: sappiamo che calcolare expmod è di costo polin
 
 La sicurezza si basa sul fatto che per trovare $z = g^{ab}$, anche sapendo $g^a$ o $g^b$, servono $a$ e $b$. Il problema è che per risalire ad uno dei due bisogna fare un logmod, un problema NP. Notare ciò non è provato, infatti l'idea che rompere DH sia difficile è appunto chiamata **Computational Diffie-Hellman assumption**.
 
-La $z$ trovata non può essere usata direttamente come chiave segreta. Infatti vorremmo che questa abbia ogni bit a 0/1 con probabilità $1/2$, mentre $z$ essendo un numero di $Z_p$ in generale non ha questa proprietà. Per fare ciò basta applicare una [[funzione hash]] a $z$. 
+La $z$ trovata non può essere usata direttamente come chiave segreta. Infatti vorremmo che questa abbia ogni bit a 0/1 con probabilità $1/2$, mentre $z$ essendo un numero di $Z_p$ in generale non ha questa proprietà. Per fare ciò basta applicare una [[Funzioni hash|funzione hash]] a $z$. 
 
 ## Man-in-the-middle
 Decifrare i messaggi è infattibile, però è possibile per E mettersi "in mezzo" alla comunicazione tra A e B. Questo è del tutto fattibile senza protocolli di autenticazione robusti. E può decidere di alterare i messaggi (short term attack) oppure non alterarli e passare inosservato (long term attack).

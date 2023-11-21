@@ -133,7 +133,7 @@ Analogamente $C^d \mod q = C^t \mod q$.
 
 Quindi invece di calcolare $C$ modexp a $d$, lo calcoliamo a $s,t$. Sono due modexp rispetto ad uno, ma con lunghezza dell'esponente circa dimezzata, rendendo molto più veloci i calcoli.
 # Optimal Asymmetric Encryption Padding (OAEP)
-Nel concreto l'RSA (ma anche tutti gli algoritmi di cifratura) richiedono un [[Crittografia simmetrica#Cifrari a blocchi|padding]] composto da sequenze casuali. Ci servono inoltre due [[Funzione hash|funzioni hash]] $G,H$. 
+Nel concreto l'RSA (ma anche tutti gli algoritmi di cifratura) richiedono un [[Crittografia simmetrica#Cifrari a blocchi|padding]] composto da sequenze casuali. Ci servono inoltre due [[Funzioni hash|funzioni hash]] $G,H$. 
 
 Se $N$ è la lunghezza in bit del modulo $n$, allora i messaggi possono essere di lunghezza massima $t = N-h-k-2$, dove $h,k$ sono parametri del protocollo. Si tratta comunque di spazio ben sufficiente. 
 
