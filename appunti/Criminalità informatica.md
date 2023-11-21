@@ -1,0 +1,31 @@
+# Capitolo I
+- Aumento netto dei cyberattacchi nel periodo 2018-2022
+	- La maggior parte in America all'inizio, poi aumenta anche l'EU
+		- Ragioni: difese più alte in America, maggiore digitalizzazione in Europa
+	- La maggior parte degli attacchi sono Malware, Phishing e Account Cracking. Tecniche a basso costo per l'attaccante
+		- Sfruttano l'incapacità di tenere tutti gli account aggiornati e sicuri
+		- Il Cybercrime opera con le stesse idea di un'azienda normale *massimo risultato per minimo sforzo*
+	- Al primo posto degli attacchi ci sono Multiple Targets, tra cui Governo e Militari per via dell'invasione in Ucraina. 
+		- C'è stato un gran salto sul campo Healthcare
+	- Le tecniche che funzionano di più sono le stesse di 30 anni fa, spesso banali e obsolete
+- Bisogna implementare logiche di **security by design**
+	- Cambio di logica: non più la cybersecurity deve essere una cosa "forzata" dalla legge ma implementata dei business per loro interesse
+		- I settori più colpiti sono infatti quelli con meno regolamentazioni e prescrizioni
+- La maggior parte dei cybercrime riguardano l'ecommerce, ma quelli dove si rubano più soldi sono di gran lunga quelli legati al trading e investimenti
+- Molti reati tradizionali diventano digitali
+	- Violazione di Domicilio $\implies$ Accesso abuso del sistema
+	- Truffa $\implies$ Truffa informatica
+	- Danneggiamento $\implies$ Danneggiamento di informazioni e dati
+- Caso Joker
+	- Gruppo di truffatori di basso rango che si evolve in ambito internazionale con grandi organizzazioni cybercriminali
+- L'ingegneria sociale è spesso la causa di un crimine informatico, non violazioni "tecniche" degli algoritmi di sicurezza
+- **Phishing**: mandare mail dove ci si spaccia per qualcun altro un'istituzione per rubare dati alle vittime. Si tratta di **social-engineering**, perché la vittima stessa rivela i dati. Non c'è una vulnerabilità in un algoritmo da sfruttare.
+	- Phishing B2B (business to business): un criminale che crea kit per fare phishing ad altri criminali
+	- **Spear Phishing:** phishing mirato ad una singola persona usando informazioni su di loro (tipo se ha figli, dove lavora)
+	- **Smishing:** phishing fatto con SMS
+	- **Vishing:** phishing fatto con vocali
+	- **Kevin Mitnick:** detto *Condor* e autore dell'*Arte dell'inganno*, libro in cui racconta come ha violato server di multinazionali per poi essere ricercato dall'FBI
+	- Scarsa cooperazione internazionale 
+- Attacchi indiretti: violare direttamente un'azienda che ha preso delle precauzioni può essere difficile. Quindi spesso vengono eseguiti dei **supply chain attack** dove si attacca un fornitore o un cliente dell'azienda (per poi arrivare a quest'ultima)
+	- Esempio: nel 2011 un attacco riuscii a penetrare il colosso di cybersecurity americano RSA, per rubare i seed per la generazione di Token usati per identificarsi. Loro non erano però il vero obbiettivo: il bersaglio era la Lockheed Martin, azienda militare. Gli attaccanti, probabilmente stati ostili agli USA, volevano rubare i dati della LM per scopi strategici.
+
