@@ -1,4 +1,4 @@
-# Capitolo I & 2
+# Capitolo I & II
 - Aumento netto dei cyberattacchi nel periodo 2018-2022
 	- La maggior parte in America all'inizio, poi aumenta anche l'EU
 		- Ragioni: difese più alte in America, maggiore digitalizzazione in Europa
@@ -29,7 +29,7 @@
 - Attacchi indiretti: violare direttamente un'azienda che ha preso delle precauzioni può essere difficile. Quindi spesso vengono eseguiti dei **supply chain attack** dove si attacca un fornitore o un cliente dell'azienda (per poi arrivare a quest'ultima)
 	- Esempio: nel 2011 un attacco riuscii a penetrare il colosso di cybersecurity americano RSA, per rubare i seed per la generazione di Token usati per identificarsi. Loro non erano però il vero obbiettivo: il bersaglio era la Lockheed Martin, azienda militare. Gli attaccanti, probabilmente stati ostili agli USA, volevano rubare i dati della LM per scopi strategici.
 
-# Capitolo 3
+# Capitolo III
 - **BEC:** Business Email Compromise, ovvero il criminale è entrato nel sistema email aziendale
 	- Una truffa possibile è quella in cui il "CEO" di un'azienda manda una mail ad un impiegato di basso livello, che quindi si sente in dovere di fare ciò che dice
 		- Esempio: *Ho bisogno di soldi per dei regali da fare a clienti ma sono senza al momento. Mi fai un bonifico? Sono in riunione quindi non rispondo al cellulare. Nel pomeriggio te li rimborso*
@@ -69,3 +69,6 @@
 			- Denunciare furto o truffe velocemente
 		- In generale la responsabilità è dell'istituzione, visto che considerata **la più adatta a gestire il rischio**
 			- Questo perché è chiaro che è l'azienda a sapere meglio, in media, quanti soldi vengano persi per cyberattacchi, e quindi è lei quella meglio in grado di spalmare questi su tutti i suoi utenti
+
+# Capitolo IV
+- Il fattore umano è coinvolto nell'85% dei crimini informatici del 2021
