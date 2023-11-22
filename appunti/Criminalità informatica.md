@@ -2,6 +2,7 @@
 - Aumento netto dei cyberattacchi nel periodo 2018-2022
 	- La maggior parte in America all'inizio, poi aumenta anche l'EU
 		- Ragioni: difese più alte in America, maggiore digitalizzazione in Europa
+	- I malware sono ospitati al 31% in Russia, 25% USA. Nota: non vuol dire che gli aggressori si trovino in quel paese
 	- La maggior parte degli attacchi sono Malware, Phishing e Account Cracking. Tecniche a basso costo per l'attaccante
 		- Sfruttano l'incapacità di tenere tutti gli account aggiornati e sicuri
 		- Il Cybercrime opera con le stesse idea di un'azienda normale *massimo risultato per minimo sforzo*
@@ -24,8 +25,12 @@
 	- **Spear Phishing:** phishing mirato ad una singola persona usando informazioni su di loro (tipo se ha figli, dove lavora)
 	- **Smishing:** phishing fatto con SMS
 	- **Vishing:** phishing fatto con vocali
+	- **QRishing:** phishing fatto con QR code
 	- **Kevin Mitnick:** detto *Condor* e autore dell'*Arte dell'inganno*, libro in cui racconta come ha violato server di multinazionali per poi essere ricercato dall'FBI
 	- Scarsa cooperazione internazionale 
+	- Il 97% degli URL di phishing usano HTTPS, che normalmente dovrebbe dare sicurezza
+		- Infatti i siti finti di phishing usano certificati **Domain Validation**, comprabili a pochi euro, a volte gratis
+		- Si dovrebbe controllare che il sito possegga un certificato **Organization Validated** o ancora meglio **Extended Validation** 
 - Attacchi indiretti: violare direttamente un'azienda che ha preso delle precauzioni può essere difficile. Quindi spesso vengono eseguiti dei **supply chain attack** dove si attacca un fornitore o un cliente dell'azienda (per poi arrivare a quest'ultima)
 	- Esempio: nel 2011 un attacco riuscii a penetrare il colosso di cybersecurity americano RSA, per rubare i seed per la generazione di Token usati per identificarsi. Loro non erano però il vero obbiettivo: il bersaglio era la Lockheed Martin, azienda militare. Gli attaccanti, probabilmente stati ostili agli USA, volevano rubare i dati della LM per scopi strategici.
 
@@ -72,3 +77,77 @@
 
 # Capitolo IV
 - Il fattore umano è coinvolto nell'85% dei crimini informatici del 2021
+- Gli attacchi sono spesso a tre fasi:
+	1. Invio di mail phishing in grado di installare malware
+	2. Download di malware in grado di rubare le credenziali
+	3. Uso delle credenziali per fare danni
+- Di solito la SI è usata in due modi
+	1. Si salta la parte di cracking vero e proprio, arrivando direttamente ai risultati
+	2. Viene usata per aiutare la parte di cracking, attaccando degli intermediari
+- Nel 2015 è stata violata la mail del capo della CIA
+	- Per fare ciò gli hacker hanno usato SI contro l'ISP della CIA e il loro provider mail (America-On-Line)
+	- Un gruppo di adolescenti ha rivendicato l'attacco, anche se si fa fatica a credere
+	- Questo attacco mostra come anche un bersaglio iper-protetto sia vulnerabile se i suoi collaboratori sono colpiti
+- **Sim Card Swapping:** trasferire il numero di telefono di una SIM ad un'altra. Il criminale trasferisce il numero di telefono della vittima ad una SIM che possiede
+	- Per fare ciò si può usare SI, corrompere chi lavora in uno store (che di solito non prende molto, quindi è attirato da soldi facili), con un documento falso oppure per semplice incompetenza dei dipendenti del SIM store
+		- Per esempio il criminale poteva chiamare o presentarsi allo store dicendo di aver perso la SIM, oppure di voler cambiare operatore. Se gli veniva chiesto un documento poteva usarne uno falso o rubato. Sempre che glielo chiedessero
+	- Ottenuto il numero di telefono della vittima questa è vulnerabile ad attacchi che gli richiedono la 2FA
+	- Il SIM Swapping è molto vecchio, ma è tornato in auge per via della proliferazione dei crypto wallet
+	- Per aumentare la sicurezza, ora per ottenere una nuova SIM ad uno store viene richiesto lo SPID, non più foto di documenti che potrebbero essere falsate
+- **Steganografia:** un gruppo hacker (WOROC) ha ideato una tecnica per mettere pezzi di virus dentro immagini PNG
+	- I bersagli sono stanti enti governativi in Medio Oriente, Sud Est asiatico, Africa
+
+## Casi di attacco
+### Caso 1
+Organizzazione:
+- **Programmatore:** esperto che crea siti falsi su uno spazio web non rintracciabile
+- **Procuratore di numeri:** persona che procura tanti numeri cellulari, meglio ancora se i bersagli hanno la banca connessa al cellulare. Di solito queste liste sono prese da Call Center, oppure dalla banca stessa tramite un'agente al loro interno
+- **Soggetti con ottima dialettica:** esperto di sociali engineering
+- **Soggetti senza competenze:** usati per prelevare i soldi agli sportelli
+
+L'organizzazione attiva poi un **servizio VOIP** con numero modificabile, per esempio possono usare quello della banca. Con questo numero viene attivato un service di **bulk messaging** per inviare tanti messaggi infetti.
+
+In questo caso studio i messaggi erano tipo: *Gentile cliente, la sua carta è stata bloccata per mancata sicurezza web psd2 antifrode. Verifica e riattiva ora: bit\.ly/XXXXXXXXX-*
+
+A questo punto venivano inviato su un sito fake ostato su un dominio gratis. Venivano presi solo nome, cognome e numero di telefono però. A questo il sito diceva che un operatore avrebbe chiamato a breve. 
+
+Il soggetto con ottima dialettica li avrebbe chiamati, rassicurandoli. A quel punto alla vittima arriva un codice SMS che gli viene chiesto di comunicare ai truffatori. Se ciò viene fatto questi riescono ad installare l'app di home banking della vittima sul loro telefono. 
+
+Infine il truffatore avvisava la vittima che era tutto a posto ma non sarebbe stato possibile usare il servizio di home banking per 48 ore (falso).
+
+A questo punto il soggetto senza competenze veniva inviato a prelevare dagli ATM, fare bonifici, o in generale rubare soldi senza venire sgamato.
+
+### Caso 2
+Attacchi fatti per rubare account WhatsApp.
+
+Anche in questo caso su è usata la SI per rubare i codici di attivazione di WA. La 2-factor-authentication di WA risulta un tallone d'Achille: dopo aver rubato l'account, i criminali attivano la 2FA in modo che la vittima non possa recuperare l'account.
+
+Dopodiché inviano a tutti i contatti messaggi simili cercando di colpire più persone. Messaggi del tipo *scusa mi sono confuso, potresti reinviarmi il codice che ti è arrivato tramite SMS?*
+
+WA ora ha l'opzione di poter riattivare l'app sul telefono delle vittime anche senza il codice, ma bisogna aspettare 7 giorni. 7 giorni in cui il criminale fa quello che vuole.
+
+Inoltre ora WA manda il codice della 2FA direttamente sull'app, senza passare da SMS, fintanto che WA è attivo e il cellulare connesso alla rete. Questo aumenta la protezione: se gli SMS sono stati violati magari comunque i criminali non hanno accesso a WA.
+
+### Caso 3
+Google è in realtà molto buona a proteggere gli utenti da danni fatti da app scaricati dal Play Store, non possono fare nulla però nel caso di APK scaricate senza usarlo. 
+
+Nel 2021 iniziarono report di smishing atto a rubare dati di carte di credito e per 2FA. Si notò come i paesi colpiti erano più che altro occidentali: Italia, Spagna, Germania, ma anche Ungheria e Polonia. Esclusi erano gli ex paesi URSS, infatti si ritiene che l'attacco sia originato lì. Infine l'Europol riuscì a smantellare i server olandesi presso cui era ospitato il malware definito FluBot.
+
+Le campagne FluBot italiane hanno interessato DHL, UPS, Amazon, più che altro corrieri. FluBot si fingeva una di queste aziende, spacciandosi per un'app per tracciare il pacco, per poi intercettare SMS e diffondersi.
+
+FluBot non violava falle nel sistema operativo, prendeva il controllo dei **servizi di accessibilità** come lettore dello schermo o tastiere automatiche per i disabili.
+
+### Caso 4
+Tutto cominciava con una farmacia che riceveva mail di phishing che riportavano guasti nel portale per l'inserimento dell'esito del tampone. Alla risposta da parte del personale della farmacia, seguiva una telefonata di criminale che si fingeva tecnico del Sistema Sanitario Regionale. 
+
+Il personale medico veniva convinto ad installare software come Anydesk o Teamviewer, fatto ciò gli veniva chiesto di inserire l'ID per la connessione terminale farmacia-portale sistema sanitario.  
+
+Siccome il personale non si ricordava quasi mai tale password, dovevano accedere al password manager del browser per ottenerla. Fatto ciò anche il finto tecnico ne aveva accesso.
+
+Con queste password potevano produrre green pass falsi ma anche svuotare i conti in cui erano entrati.
+
+Il servizio usato all'inizio era lufix.to, un sito apertamente criminale: *At Lufix.to You can Buy Spamming Tools, SSH, Shells, RDP, Cpanel, Mailer, SMTP, Leads, Email:password, Combo, FULLZ*
+
+  
+
+
