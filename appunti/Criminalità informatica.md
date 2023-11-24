@@ -1,5 +1,5 @@
 # Capitolo I & II
-- Aumento netto dei cyberattacchi nel periodo 2018-2022
+- Aumento netto dei cyber attacchi nel periodo 2018-2022
 	- La maggior parte in America all'inizio, poi aumenta anche l'EU
 		- Ragioni: difese più alte in America, maggiore digitalizzazione in Europa
 	- I malware sono ospitati al 31% in Russia, 25% USA. Nota: non vuol dire che gli aggressori si trovino in quel paese
@@ -146,7 +146,9 @@ Siccome il personale non si ricordava quasi mai tale password, dovevano accedere
 
 Con queste password potevano produrre green pass falsi ma anche svuotare i conti in cui erano entrati.
 
-Il servizio usato all'inizio era lufix.to, un sito apertamente criminale: *At Lufix.to You can Buy Spamming Tools, SSH, Shells, RDP, Cpanel, Mailer, SMTP, Leads, Email:password, Combo, FULLZ*
+Il servizio usato all'inizio era lufix.to, un sito apertamente criminale: 
+
+*At Lufix.to you can Buy Spamming Tools, SSH, Shells, RDP, Cpanel, Mailer, SMTP, Leads, Email:password, Combo, FULLZ*
 
   
 
